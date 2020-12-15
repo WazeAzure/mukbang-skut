@@ -18,3 +18,20 @@ function loginA(){
 		liff.login();
 	}
 }
+
+function closeA(){
+	liff.closeWindow();
+}
+
+function sendA(){
+	liff.sendMessage([{
+		type:"text",
+		text:"Halo, DIcoding!"
+	}])
+	.then(() => {
+		console.log('message sent');
+	})
+	.catch((err) => {
+		console.log('error', err);
+	});
+}
