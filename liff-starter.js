@@ -8,7 +8,7 @@ window.onload = function() {
 
 function move(){
 	liff.openWindow({
-            url: 'https://cineplex.com', // Isi dengan Endpoint URL aplikasi web Anda
+            url: 'https://21cineplex.com', // Isi dengan Endpoint URL aplikasi web Anda
             external: true
         });
 }
