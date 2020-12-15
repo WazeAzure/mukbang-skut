@@ -11,7 +11,9 @@
 		<div class="container">
 			<header>
 				<div class="header-container">
-					
+					<div id="isInClient"></div>
+					<div id="isLoggedIn"></div>
+					<div id="isInClientMessage"></div>
 				</div>
 			</header>
 			<div class="body">
@@ -35,10 +37,11 @@
 				</div>
 			</div>
 			<footer>
-				<button onclick="loginA()">Login CUY!</button>
-				<button onclick="move()">Expands CUy!</button>
-				<button onclick="closeA()">OUT!</button>
-				<button onclick="sendA()">send message</button>
+				<button id="logInButton">Login CUY!</button>
+				<button id="logOutButton">Logout CUY!</button>
+				<button id="extendButton">Expands CUy!</button>
+				<button id="closeButton">OUT!</button>
+				<button id="sendButton">send message</button>
 			</footer>
 		</div>
 		<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
