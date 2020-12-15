@@ -5,3 +5,10 @@ window.onload = function() {
     // DO NOT CHANGE THIS
     let myLiffId = "";
 };
+
+function move(){
+	liff.openWindow({
+            url: 'https://cineplex.com', // Isi dengan Endpoint URL aplikasi web Anda
+            external: true
+        });
+}
