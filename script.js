@@ -103,3 +103,4 @@ function count(){
 	let confirmSemua = totSemua.reduce((a,b) => {return a+b});
 	document.getElementById("total").innerHTML = confirmSemua;
 }
+
