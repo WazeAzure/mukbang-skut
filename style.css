@@ -1,57 +1,73 @@
-html {
-    font-size: 11px;
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: monospace;
 }
 
-table {
-    width: 100%;
-    overflow-x: auto;
-    display: block;
+@media(max-width: 700px){
+header {
+	width: 100%;
+	height: 65px;
+	background-color: rgb(11, 255, 3);
+}
+.header-container {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+}
+#prof-pict {
+	border-radius: 50%;
+	width: 30px;
+	height: auto;
+	float: left;
+	line-height: 65px;
+	margin-right: 10px;
+}
+.header-container h1 {
+	font-size: 20px;
+	line-height: 65px;
+}
+.app {
+	padding-top: 20px;
+}
+.app-container {
+	width: 90%;
+	margin: auto;
+}
+.overflow {
+	display: flex;
+	flex-direction: row;
+	height: 400px;
+	overflow: scroll hidden;
+}
+.cards {
+	background-color: rgba(222,222,222,0.7);
+	border-radius: 10px;
+	margin: 10px;
+}
+.cards img{
+	width: 200px;
+	height: auto;
+}
+.cards p {
+	padding: 5px 10px;
+}
+.cards input {
+	margin: 5px 10px;
+}
+.cards hr {
+	margin-top: 10px;
 }
 
-div {
-    max-width: 100%;
-    text-align: center;
 }
 
-th {
-    text-align: left;
-}
 
-img { 
-    max-width: 25%; 
-    height: auto; 
-}
 
-button {
-    margin: 4px;
-}
 
-#code-block {
-    background-color: #eee;
-    border: 1px solid #999;
-    display: block;
-    padding: 20px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-x: auto;
-    white-space: nowrap;
-}
 
-#statusMessage {
-    position: relative;
-    top: 40px;
-}
 
-.textLeft {
-    text-align: left;
-}
 
-.buttonGroup {
-    position: relative;
-    top: 20px;
-}
 
-.hidden {
-    display: none;
-}
