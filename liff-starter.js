@@ -22,7 +22,9 @@ function initializeLiff(myLiffId){
         });
 }
 function hi(){
-	console.log("HIHIHIH")
+	console.log("HIHIHIH");
+	liff.login();
+	alert("LOGIN!!!");
 }
 function bye(){
 	console.log("User logout cuy!");
