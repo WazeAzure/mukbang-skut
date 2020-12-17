@@ -27,6 +27,7 @@ function hi(){
 function bye(){
 	console.log("User logout cuy!");
 	liff.logout();
+	alert("Logout!");
 }
 function initializeApp(){
 	console.log("JHIHI")
