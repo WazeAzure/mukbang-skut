@@ -43,7 +43,7 @@ function initializeApp(){
 }
 function displayLiffData() {
     document.getElementById('user_id').innerHTML = liff.isInClient();
-    document.getElementById('user_inLogin').textContent = liff.isLoggedIn();
+    document.getElementById('user_inLogin').innerHTML = liff.isLoggedIn();
 }
 function displayIsInClientInfo() {
     if (liff.isInClient()) {
