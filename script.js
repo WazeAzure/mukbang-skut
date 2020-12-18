@@ -101,6 +101,6 @@ function count(){
 	}
 	console.log(totSemua);
 	let confirmSemua = totSemua.reduce((a,b) => {return a+b});
-	document.getElementById("total").innerHTML = confirmSemua;
+	document.getElementById("total").innerHTML = "Total : Rp " + confirmSemua;
 }
 
