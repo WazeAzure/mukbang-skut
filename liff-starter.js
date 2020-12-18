@@ -79,7 +79,7 @@ function sendMessage(){
 					'contents': [
 						{
 							'type':'image',
-							'uri':`${liff.getDecodedIDToken().picture}`
+							'originalContentUrl':`${liff.getDecodedIDToken().picture}`
 						}
 					]
 				},
