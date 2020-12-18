@@ -86,7 +86,7 @@ function sendMessage(){
 				},
 				{
 					"type": "text",
-					"text": "world"
+					"text": "6 Soto Makassar : 192000 2 Soto Makassar : 64000"
 				}
 				]
 			}
