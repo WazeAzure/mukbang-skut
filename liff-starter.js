@@ -79,11 +79,15 @@ function sendMessage(){
 					'contents': [
 						{
 							'type':'text',
-							'text':`Halo ${liff.getDecodedIDToken().name}!`
+							'text':`Halo slur`
 						},
 						{
 							'type':'text',
-							'text':`Halo ${liff.getDecodedIDToken().name}!`
+							'text':`Halo slur`
+						},
+						{
+							'type':'text',
+							'text':`Halo slur`
 						}
 					]
 				}
