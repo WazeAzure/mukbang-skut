@@ -71,27 +71,18 @@ function bye(){
 	
 }
 function sendMessage(){
-	liff.sendMessages([{
-		"type": "flex",
-		"altText": "this is a flex message",
-		"contents": {
-			"type": "bubble",
-			"body": {
-				"type": "box",
-				"layout": "vertical",
-				"contents": [
-				{
-					"type": "text",
-					"text": `Lolskiiii awokwok! Hi ${liff.getDecodedIDToken().name}\n Haha ini line2`
-				},
-				{
-					"type": "text",
-					"text": "6 Soto Makassar : 192000 2 Soto Makassar : 64000"
-				}
-				]
-			}
-		}
-	}])
+	liff.sendMessages([
+	{
+		"type": "text",
+		"text": `iasuhaiduhaishulaiuhlahuanohnah ${liff.getDecodedIDToken.name}`
+	},
+	{
+		"type":"text",
+		"text": "jhdia sdhu aisugda isdug ai fd sfihsgk ",
+		"text": "dfhfsuhoiuewirugewirowegrio dsfls dh "
+	}
+		
+	])
 			.then(function() {
                 window.alert('Ini adalah pesan dari fitur Send Message');
             }).catch(function(error) {
