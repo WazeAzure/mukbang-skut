@@ -82,7 +82,7 @@ function sendMessage(){
 				"contents": [
 				{
 					"type": "text",
-					"text": `Lolskiiii awokwok! Hi ${liff.getDecodedIDToken().name}`
+					"text": `Lolskiiii awokwok! Hi ${liff.getDecodedIDToken().name}\n Haha ini line2`
 				},
 				{
 					"type": "text",
