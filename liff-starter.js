@@ -74,7 +74,7 @@ function sendMessage(){
 	liff.sendMessages([
 	{
 		"type": "text",
-		"text": `iasuhaiduhaishulaiuhlahuanohnah ${liff.getDecodedIDToken.name}`
+		"text": `iasuhaiduhaishulaiuhlahuanohnah ${liff.getDecodedIDToken().name}\n New Line Lolski`
 	},
 	{
 		"type":"text",
