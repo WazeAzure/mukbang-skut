@@ -81,9 +81,8 @@ function sendMessage(){
 				"layout": "vertical",
 				"contents": [
 				{
-					"type": "image",
-					"originalContentUrl": "https://d17ivq9b7rppb3.cloudfront.net/original/commons/new-ui-logo.png",
-					"previewImageUrl": "https://d17ivq9b7rppb3.cloudfront.net/original/commons/new-ui-logo.png"
+					"type": "text",
+					"text": `Lolskiiii awokwok! Hi ${liff.getDecodedIDToken().name}`
 				},
 				{
 					"type": "text",
