@@ -3,7 +3,7 @@ window.onload = function(){
 	let myLiffId = "";
 	
 	myLiffId = defaultLiffId;
-	initializeLifforDie(myLiffId);
+	initializeLifforDie(defaultLiffId);
 }
 function initializeLifforDie(myLiffId){
 	initializeLiff(myLiffId);
@@ -18,18 +18,8 @@ function initializeLiff(myLiffId){
             initializeApp();
         })
         .catch((err) => {
-            console.log("LoLError!");
+            console.log("LoLError! " + err);
         });
-}
-function hi(){
-	console.log("HIHIHIH");
-	//liff.login();
-	alert("LOGIN!!!");
-}
-function bye(){
-	console.log("User logout cuy!");
-	liff.logout();
-	alert("Logout!");
 }
 function initializeApp(){
 	console.log("JHIHI")
@@ -48,6 +38,12 @@ function initializeApp(){
 function displayLiffData() {
     document.getElementById('user_id').innerHTML = liff.isInClient();
     document.getElementById('user_inLogin').innerHTML = liff.isLoggedIn();
+	alert("display LoL");
+	if(liff.isLoggedIn()){
+		let username = liff.getDecodedIDToken();
+		document.getElementById('user_id').innerHTML = username.name;
+		document.getElementById('user_inLogin').innerHTML = username.picture;
+	}
 }
 function displayIsInClientInfo() {
     if (liff.isInClient()) {
@@ -57,6 +53,22 @@ function displayIsInClientInfo() {
     } else {
         document.getElementById('isInClientMessage').textContent = 'You are opening the app in an external browser.';
     }
+}
+function hi(){
+	console.log("HIHIHIH");
+	if(!liff.isLoggedIn){
+		alert("Trynna login");
+		liff.login;
+	}
+	alert("LOGIN!!!");
+}
+function bye(){
+	console.log("User logout cuy!");
+	if(liff.isLoggedIn()){
+		liff.logout();
+		alert("Logout!");
+	}
+	
 }
 function sendMessage(){
 	liff.sendMessages([{
@@ -68,4 +80,14 @@ function sendMessage(){
                 window.alert('Error sending message: ' + error);
             });
 	
+}
+function open(){
+	liff.openWindow({
+		url: 'https://mukbang-skut.herokuapp.com/',
+		external: trues
+	})
+}
+function confirmPenjualan(){
+	sendMessage();
+	liff.closeWindow();
 }
