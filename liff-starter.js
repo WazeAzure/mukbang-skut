@@ -73,20 +73,14 @@ function bye(){
 function sendMessage(){
 	liff.sendMessages([{
                 'type': 'buble',
-				'header': {
-					'type':'box',
-					'layout':'vertical',
-					'contents': [
-						{
-							'type':'image',
-							'originalContentUrl':`${liff.getDecodedIDToken().picture}`
-						}
-					]
-				},
                 'body': {
 					'type':'box',
 					'layout':'horizontal',
 					'contents': [
+						{
+							'type':'text',
+							'text':`Halo ${liff.getDecodedIDToken().name}!`
+						},
 						{
 							'type':'text',
 							'text':`Halo ${liff.getDecodedIDToken().name}!`
