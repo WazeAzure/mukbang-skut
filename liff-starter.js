@@ -81,8 +81,9 @@ function sendMessage(){
 				"layout": "vertical",
 				"contents": [
 				{
-					"type": "text",
-					"text": "hello"
+					"type": "image",
+					"originalContentUrl": "https://d17ivq9b7rppb3.cloudfront.net/original/commons/new-ui-logo.png",
+					"previewImageUrl": "https://d17ivq9b7rppb3.cloudfront.net/original/commons/new-ui-logo.png"
 				},
 				{
 					"type": "text",
