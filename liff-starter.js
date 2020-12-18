@@ -72,8 +72,27 @@ function bye(){
 }
 function sendMessage(){
 	liff.sendMessages([{
-                'type': 'text',
-                'text': "Anda telah menggunakan fitur Send Message!"
+                'type': 'buble',
+				'header': {
+					'type':'box',
+					'layout':'vertical',
+					'contents': [
+						{
+							'type':'image',
+							'uri':`${liff.getDecodedIDToken().picture}`
+						}
+					]
+				},
+                'body': {
+					'type':'box',
+					'layout':'horizontal',
+					'contents': [
+						{
+							'type':'text',
+							'text':`Halo ${liff.getDecodedIDToken().name}!`
+						}
+					]
+				}
             }]).then(function() {
                 window.alert('Ini adalah pesan dari fitur Send Message');
             }).catch(function(error) {
