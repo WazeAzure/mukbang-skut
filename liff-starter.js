@@ -42,7 +42,7 @@ function displayLiffData() {
 	if(liff.isLoggedIn()){
 		let username = liff.getDecodedIDToken();
 		document.getElementById('user_id').innerHTML = username.name;
-		document.getElementById('user_inLogin').innerHTML = username.picture;
+		document.getElementById('prof-pict').setAttribute('src',username.picture);
 	}
 }
 function displayIsInClientInfo() {
