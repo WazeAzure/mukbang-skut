@@ -74,7 +74,7 @@ function sendMessage(){
 	liff.sendMessages([
 	{
 		"type": "text",
-		"text": `Hi ${liff.getDecodedIDToken().name}\nBerikut Pesanan Anda:${totPesanan}\nTotal Harga =${totSemua}`
+		"text": `Hi ${liff.getDecodedIDToken().name}\nBerikut Pesanan Anda:${totPesanan}\n\nTotal Harga =${sumAll}`
 	}
 	])
 			.then(function() {
