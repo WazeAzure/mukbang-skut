@@ -75,14 +75,8 @@ function sendMessage(){
 	liff.sendMessages([
 	{
 		"type": "text",
-		"text": `Hi ${liff.getDecodedIDToken().name}\nBerikut Pesanan Anda:\n${totPesanan}`
-	},
-	{
-		"type":"text",
-		"text": "jhdia sdhu aisugda isdug ai fd sfihsgk ",
-		"text": "dfhfsuhoiuewirugewirowegrio dsfls dh "
+		"text": `Hi ${liff.getDecodedIDToken().name}\nBerikut Pesanan Anda:\n${totPesanan}\nTotal Harga = ${totSemua.reduce((a,b) => {return a+b})}`
 	}
-		
 	])
 			.then(function() {
                 window.alert('Ini adalah pesan dari fitur Send Message');
