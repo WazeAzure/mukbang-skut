@@ -70,11 +70,12 @@ function bye(){
 	}
 	
 }
+console.log(totPesanan);
 function sendMessage(){
 	liff.sendMessages([
 	{
 		"type": "text",
-		"text": `iasuhaiduhaishulaiuhlahuanohnah ${liff.getDecodedIDToken().name}\n New Line Lolski`
+		"text": `Hi ${liff.getDecodedIDToken().name}\nBerikut Pesanan Anda:\n${totPesanan}`
 	},
 	{
 		"type":"text",
