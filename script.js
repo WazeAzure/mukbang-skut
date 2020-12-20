@@ -100,7 +100,7 @@ function count(){
 			hargaView.innerHTML = `${input} ${listminuman[i].nama}\t\t: ${total}`;
 			var element = document.getElementById("kesimpulan-minuman");
 			element.append(hargaView);
-			totPesanan.push(`${input} ${listminuman[i].nama}\t\t: ${total}`);
+			totPesanan.push(`\n${input} ${listminuman[i].nama}: ${total}`);
 		};
 	}
 	console.log(totSemua);
