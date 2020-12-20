@@ -9,25 +9,26 @@ var jumlahMinuman = Object.keys(listMenu.minuman).length;
 
 //bikin kartu makanan
 for(let i=0;i<jumlahMakanan;i++){	
+	//bikin div maanan
 	var card = document.createElement("div");
 	card.className = "cards";
-	
+	//apply gambar
 	var img = document.createElement("img");
 	img.src = listmakanan[i].gambar;
 	card.appendChild(img);
-	
+	//apply text
 	var text = document.createElement("p");
 	text.innerHTML = listmakanan[i].nama;
 	card.appendChild(text);
-	
+	//apply deskripsi
 	var textDesc = document.createElement("p");
 	textDesc.innerHTML = listmakanan[i].deskripsi;
 	card.appendChild(textDesc);
-	
+	//Jumlah makanan
 	var harga = document.createElement("p");
 	harga.innerHTML = listmakanan[i].harga + "<hr> Jumlah Porsi:";
 	card.appendChild(harga);
-	
+	//bikin input didalam card
 	var input = document.createElement("input");
 	input.setAttribute('type', 'number');
 	input.setAttribute('placeholder', '0');
@@ -35,7 +36,7 @@ for(let i=0;i<jumlahMakanan;i++){
 	input.setAttribute('min', '0');
 	input.setAttribute('id', `food${i}`);
 	card.appendChild(input);
-	
+	//taroh card didalam sebuah div listMakanan
 	var element = document.getElementById("listMakanan");
 	element.append(card);
 }
@@ -73,6 +74,7 @@ for(let i=0;i<jumlahMinuman;i++){
 
 //Kesimpulan
 let totSemua = []
+let totPesanan = []
 function count(){
 	document.getElementById("kesimpulan-makanan").innerHTML = "";
 	document.getElementById("kesimpulan-minuman").innerHTML = "";
@@ -85,6 +87,7 @@ function count(){
 			hargaView.innerHTML = `${input} ${listmakanan[i].nama}\t\t: ${total}`;
 			var element = document.getElementById("kesimpulan-makanan");
 			element.append(hargaView);
+			totPesanan.push(`${input} ${listmakanan[i].nama}\t\t: ${total}`);
 		};
 	}
 	console.log("---------------------");
@@ -97,6 +100,7 @@ function count(){
 			hargaView.innerHTML = `${input} ${listminuman[i].nama}\t\t: ${total}`;
 			var element = document.getElementById("kesimpulan-minuman");
 			element.append(hargaView);
+			totPesanan.push(`${input} ${listminuman[i].nama}\t\t: ${total}`);
 		};
 	}
 	console.log(totSemua);
