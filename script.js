@@ -78,6 +78,7 @@ let totPesanan = []
 function count(){
 	document.getElementById("kesimpulan-makanan").innerHTML = "";
 	document.getElementById("kesimpulan-minuman").innerHTML = "";
+	totSemua = [];
 	for(let i = 0;i<jumlahMakanan;i++){
 		let input = document.getElementById(`food${i}`).value;
 		if(input > 0){
@@ -107,8 +108,4 @@ function count(){
 	let confirmSemua = totSemua.reduce((a,b) => {return a+b});
 	sumAll(confirmSemua);
 	document.getElementById("total").innerHTML = "Total : Rp " + confirmSemua;
-	totSemua = [];
-}
-function sumAll(total){
-	return total;
 }
