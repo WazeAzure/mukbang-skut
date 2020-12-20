@@ -70,12 +70,11 @@ function bye(){
 	}
 	
 }
-console.log(totPesanan);
 function sendMessage(){
 	liff.sendMessages([
 	{
 		"type": "text",
-		"text": `Hi ${liff.getDecodedIDToken().name}\nBerikut Pesanan Anda:\n${totPesanan}\nTotal Harga = ${totSemua.reduce((a,b) => {return a+b})}`
+		"text": `Hi ${liff.getDecodedIDToken().name}\nBerikut Pesanan Anda:\n${totPesanan}\nTotal Harga =${totSemua}`
 	}
 	])
 			.then(function() {
