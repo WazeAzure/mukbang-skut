@@ -87,7 +87,7 @@ function count(){
 			hargaView.innerHTML = `${input} ${listmakanan[i].nama}\t\t: ${total}`;
 			var element = document.getElementById("kesimpulan-makanan");
 			element.append(hargaView);
-			totPesanan.push(`${input} ${listmakanan[i].nama}\t\t: ${total}`);
+			totPesanan.push(`${input} ${listmakanan[i].nama}\t\t: ${total}\n`);
 		};
 	}
 	console.log("---------------------");
