@@ -1,5 +1,6 @@
+const defaultLiffId = "1655378358-J317E6Xo";
 window.onload = function(){
-	const defaultLiffId = "1655378358-J317E6Xo";
+
 	let myLiffId = "";
 	
 	myLiffId = defaultLiffId;
@@ -27,6 +28,10 @@ function initializeApp(){
     displayIsInClientInfo();
     registerButtonHandlers();
 	
+	if(liff.isInClient()){
+		document.getElementById('user_login').style.display = "none";
+		document.getElementById('user_logout').style.display = "none";
+	}
 	if (liff.isLoggedIn()) {
         document.getElementById('user_login').disabled = true;
 		console.log("LOGIN!")
@@ -37,8 +42,7 @@ function initializeApp(){
 }
 function displayLiffData() {
     document.getElementById('user_id').innerHTML = liff.isInClient();
-    document.getElementById('user_inLogin').innerHTML = liff.isLoggedIn();
-	alert("display LoL");
+    //document.getElementById('user_inLogin').innerHTML = liff.isLoggedIn();
 	if(liff.isLoggedIn()){
 		let username = liff.getDecodedIDToken();
 		document.getElementById('user_id').innerHTML = username.name;
@@ -56,7 +60,7 @@ function displayIsInClientInfo() {
 }
 function hi(){
 	console.log("HIHIHIH");
-	if(!liff.isLoggedIn){
+	if(!liff.isLoggedIn()){
 		alert("Trynna login");
 		liff.login;
 	}

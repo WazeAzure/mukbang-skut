@@ -16,28 +16,28 @@
 			<div class="header-container">
 				<img id="prof-pict" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
 				<h1 id="user_id">Halo Angga!</h1>
-				<h1 id="user_inLogin">Halo Angga!</h1>
 			</div>
 		</header>
 		<div class="app">
 			<div class="app-container">
 				<div class="makanan">
-					<h1>Makanan</h1>
+					<h1>Daftar Makanan</h1>
 					<div id="listMakanan" class="overflow">
 						
 					</div>
 				</div>
+				<br>
 				<div class="minuman">
-					<h1>Minuman</h1>
+					<h1>Daftar Minuman</h1>
 					<div id="listMinuman" class="overflow">
 					
 					</div>
 				</div>
 			</div>
 		</div>
-		<hr>
 		<footer>
 			<div class="footer-container">
+			<hr>
 				<h1>Ringkasan</h1>
 				<div id="kesimpulan-makanan">
 					
@@ -46,12 +46,12 @@
 					
 				</div>
 				<p id="total"></p>
-				<button onclick="count()">Hitung Total</button>
-				<button id="user_login" onclick="hi()">login</button>
+				<button class="btn green" onclick="count()">Hitung Total</button>
+				<button class="btn" onclick="confirmPenjualan()"> Confirm Penjualan </button>
 				<br>
-				<button id="user_logout" onclick="bye()">Logout</button>
-				<br>
-				<button onclick="confirmPenjualan()"> Confirm Penjualan </button>
+				<button class="btn" id="user_login" onclick="hi()">login</button>
+				<button class="btn" id="user_logout" onclick="bye()">Logout</button>
+				
 				<br>
 				<a href="" onclick="open()">Open in external window</a>
 			</div>

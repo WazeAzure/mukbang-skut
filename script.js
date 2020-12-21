@@ -19,6 +19,7 @@ for(let i=0;i<jumlahMakanan;i++){
 	//apply text
 	var text = document.createElement("p");
 	text.innerHTML = listmakanan[i].nama;
+	text.className = "title";
 	card.appendChild(text);
 	//apply deskripsi
 	var textDesc = document.createElement("p");
@@ -26,7 +27,7 @@ for(let i=0;i<jumlahMakanan;i++){
 	card.appendChild(textDesc);
 	//Jumlah makanan
 	var harga = document.createElement("p");
-	harga.innerHTML = listmakanan[i].harga + "<hr> Jumlah Porsi:";
+	harga.innerHTML = "Rp " + listmakanan[i].harga + "<hr> Jumlah Porsi:";
 	card.appendChild(harga);
 	//bikin input didalam card
 	var input = document.createElement("input");
@@ -52,6 +53,7 @@ for(let i=0;i<jumlahMinuman;i++){
 	
 	var text = document.createElement("p");
 	text.innerHTML = listminuman[i].nama;
+	text.className = "title";
 	card.appendChild(text);
 	
 	var textDesc = document.createElement("p");
@@ -59,7 +61,7 @@ for(let i=0;i<jumlahMinuman;i++){
 	card.appendChild(textDesc);
 	
 	var harga = document.createElement("p");
-	harga.innerHTML = listminuman[i].harga + "<hr> Jumlah Porsi:";
+	harga.innerHTML = "Rp " + listminuman[i].harga + "<hr> Jumlah Porsi:";
 	card.appendChild(harga);
 	
 	var input = document.createElement("input");
@@ -106,6 +108,5 @@ function count(){
 	}
 	console.log(totSemua);
 	let confirmSemua = totSemua.reduce((a,b) => {return a+b});
-	sumAll(confirmSemua);
 	document.getElementById("total").innerHTML = "Total : Rp " + confirmSemua;
 }
